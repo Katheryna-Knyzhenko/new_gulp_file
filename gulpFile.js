@@ -5,8 +5,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
-function copyToCss (done) {
-    gulp.src('./src/scss/**/*.scss')
+function copy (done) {
+    gulp.src('./src/scss/App.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             errorLogToConsole: true,
@@ -27,20 +27,20 @@ function print (done) {
     done();
 }
 // gulp.task(copyToCss);
-function watchSass () {
-    gulp.watch('./src/scss/**/*', copyToCss);
-}
-function sync (done) {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        },
-        port: 9000,
-        tunnel: true,
-        notify: false
-    });
-    browserSync.watch('out/').on('change', browserSync.reload);
-    done();
-}
-gulp.task('default', gulp.series(print, watchSass));
-gulp.task(sync);
+// function watchSass () {
+//     gulp.watch('./src/scss/**/*', copy);
+// }
+// function sync (done) {
+//     browserSync.init({
+//         server: {
+//             baseDir: "./"
+//         },
+//         port: 9000,
+//         tunnel: true,
+//         notify: false
+//     });
+//     browserSync.watch('out/').on('change', browserSync.reload);
+//     done();
+// }
+gulp.task('default', gulp.series(print, copy));
+// gulp.task(sync);
