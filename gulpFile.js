@@ -30,17 +30,17 @@ function print (done) {
 function watchSass () {
     gulp.watch('./src/scss/App.scss', copy);
 }
-// function sync (done) {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         },
-//         port: 9000,
-//         tunnel: true,
-//         notify: false
-//     });
-//     browserSync.watch('out/').on('change', browserSync.reload);
-//     done();
-// }
+function sync (done) {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        },
+        port: 9000,
+
+
+    });
+
+    done();
+}
 gulp.task('default', gulp.series(print, watchSass));
-// gulp.task(sync);
+gulp.task(sync);
