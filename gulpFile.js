@@ -26,10 +26,10 @@ function print (done) {
     console.log('Hi print!');
     done();
 }
-// gulp.task(copyToCss);
-// function watchSass () {
-//     gulp.watch('./src/scss/**/*', copy);
-// }
+
+function watchSass () {
+    gulp.watch('./src/scss/App.scss', copy);
+}
 // function sync (done) {
 //     browserSync.init({
 //         server: {
@@ -42,5 +42,5 @@ function print (done) {
 //     browserSync.watch('out/').on('change', browserSync.reload);
 //     done();
 // }
-gulp.task('default', gulp.series(print, copy));
+gulp.task('default', gulp.series(print, watchSass));
 // gulp.task(sync);
