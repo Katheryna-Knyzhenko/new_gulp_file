@@ -1,9 +1,12 @@
+import {server} from "gulp-livereload";
+
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var reload = require('gulp-server-livereload');
 
 function copy (done) {
     gulp.src('./src/scss/App.scss')
@@ -42,5 +45,14 @@ function sync (done) {
 
     done();
 }
+gulp.task('webserver', function() {
+    gulp.src('')
+        .pipe(server({
+            livereload: true,
+            defaultFile: 'index.html',
+            directoryListing: false,
+            open: false
+        }));
+});
 gulp.task('default', gulp.series(print, watchSass));
 gulp.task(sync);
