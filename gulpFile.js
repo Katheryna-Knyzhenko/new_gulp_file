@@ -1,5 +1,4 @@
-import {server} from "gulp-livereload";
-
+var {server} = require  ("gulp-server-livereload");
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -56,3 +55,4 @@ gulp.task('webserver', function() {
 });
 gulp.task('default', gulp.series(print, watchSass));
 gulp.task(sync);
+gulp.task(print);
