@@ -6,6 +6,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var reload = require('gulp-server-livereload');
+var concat = require('gulp-concat'),
+gulp = require('gulp');
 
 function copy (done) {
     gulp.src('./src/scss/App.scss')
@@ -44,6 +46,11 @@ function sync (done) {
 
     done();
 }
+gulp.task('scripts', function() {
+    return gulp.src(['./src/js/App.js', './src/js/App2.js'])
+        .pipe(concat('All.js'))
+        .pipe(gulp.dest('./src/dist/'));
+});
 gulp.task('webserver', function() {
     gulp.src('')
         .pipe(server({
