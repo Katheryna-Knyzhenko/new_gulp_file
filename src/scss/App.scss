@@ -1,7 +1,7 @@
 $color: yellowgreen;
 .App {
   background-color: $color;
-    height: 80vh;
+    height: 60vh;
     padding: 1%;
     color: white;
     font-size: 2em;
@@ -11,10 +11,11 @@ $color: yellowgreen;
 }
 
 .App2 {
-  background-color: red;
-  height: 20vh;
+  background-color: hotpink;
+  border: solid 2px black;
+  height: 40vh;
   padding: 1%;
-  color: white;
+  color: black;
   font-size: 2em;
   margin: 0 auto;
   text-align: center;
