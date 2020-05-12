@@ -9,6 +9,7 @@ var reload = require('gulp-server-livereload');
 var concat = require('gulp-concat'),
 gulp = require('gulp');
 var uglyfly = require('gulp-uglyfly');
+var react = require('gulp-react');
 
 
 function copy (done) {
@@ -50,6 +51,7 @@ function sync (done) {
 }
 gulp.task('scripts', function() {
     return gulp.src(['./src/js/App.js', './src/js/App2.js'])
+        .pipe(react())
         .pipe(concat('All.js'))
         .pipe(uglyfly())
         .pipe(gulp.dest('./src/dist/'));
