@@ -8,6 +8,8 @@ var browserSync = require('browser-sync').create();
 var reload = require('gulp-server-livereload');
 var concat = require('gulp-concat'),
 gulp = require('gulp');
+var uglyfly = require('gulp-uglyfly');
+
 
 function copy (done) {
     gulp.src('./src/scss/App.scss')
@@ -49,6 +51,7 @@ function sync (done) {
 gulp.task('scripts', function() {
     return gulp.src(['./src/js/App.js', './src/js/App2.js'])
         .pipe(concat('All.js'))
+        .pipe(uglyfly())
         .pipe(gulp.dest('./src/dist/'));
 });
 gulp.task('webserver', function() {

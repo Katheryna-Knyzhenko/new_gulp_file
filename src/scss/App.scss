@@ -1,11 +1,22 @@
-$color: orange;
+$color: yellowgreen;
 .App {
   background-color: $color;
-    height: 100vh;
+    height: 80vh;
     padding: 1%;
     color: white;
     font-size: 2em;
     margin: 0 auto;
+  text-align: center;
+
+}
+
+.App2 {
+  background-color: red;
+  height: 20vh;
+  padding: 1%;
+  color: white;
+  font-size: 2em;
+  margin: 0 auto;
   text-align: center;
 
 }

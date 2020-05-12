@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/App.min.css';
 
-function App() {
+function App2() {
   return (
     <div className="App">
 <h1>Привет</h1>
-        <article>Я Катерина Книженко</article>
+        <article>Я Катерина Нікітченко</article>
     </div>
   );
 }
 
-export default App;
+export default App2;
