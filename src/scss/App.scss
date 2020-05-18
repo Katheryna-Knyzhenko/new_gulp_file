@@ -13,12 +13,12 @@ $color: grey;
   padding: 0;
   margin: 0;
 }
-//@mixin fontSize ($color, $fontW) {
-//  font-size: 1.1em;
-//  font-weight: $fontW;
-//  font-family: "Arial Narrow", sans-serif;
-//  color: $color;
-//}
+@mixin fontSize ($color, $fontW) {
+  font-size: 1.1em;
+  font-weight: $fontW;
+  font-family: "Arial Narrow", sans-serif;
+  color: $color;
+}
 @mixin pad ($pad...) {
   padding: $pad;
 }
@@ -36,26 +36,30 @@ color: white;
   ul {
     list-style: none;
     display: inline-block;
-  }
-  a {
-    //@include fontSize (blue, bold) {
-    //  text-decoration: underline;
+
+    a {
+      @include fontSize (blue, bold);
+        text-decoration: underline;
+
     }
   }
+  }
 
-.App2 {
-  background-color: blanchedalmond;
-  border: solid 2px black;
-  height: 140vh;
-  padding: 1%;
-  color: black;
-  font-size: 2em;
-  margin: 0 auto;
-  text-align: center;
 
-}
-img {
-  width: 50%;
-  margin: 2em;
-  border-radius: 14%;
-}
+  .App2 {
+    background-color: blanchedalmond;
+    border: solid 2px black;
+    height: 140vh;
+    padding: 1%;
+    color: black;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
+  img {
+    width: 50%;
+    margin: 2em;
+    border-radius: 14%;
+  }
