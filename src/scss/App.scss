@@ -7,12 +7,17 @@ $color: grey;
     color: white;
     font-size: 2em;
     margin: 0 auto;
-  text-align: center;
 
 }
 * {
   padding: 0;
   margin: 0;
+}
+@mixin fontSize ($color, $fontW) {
+  font-size: 1.1em;
+  font-weight: $fontW;
+  font-family: "Arial Narrow", sans-serif;
+  color: $color;
 }
 .block:not(.first) {
 color: gray;
@@ -20,6 +25,18 @@ color: gray;
   height: 200px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+#central-block {
+  padding: 30px;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+  a {
+    @include fontSize (blue, bold)
+   text-decoration: underline;
+  }
 }
 .App2 {
   background-color: powderblue;
