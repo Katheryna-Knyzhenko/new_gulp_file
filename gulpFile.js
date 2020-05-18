@@ -10,6 +10,9 @@ var concat = require('gulp-concat'),
 gulp = require('gulp');
 var uglyfly = require('gulp-uglyfly');
 var react = require('gulp-react');
+var imagemin = require('gulp-imagemin');
+var terser = require('gulp-terser');
+var babel = require('gulp-babel');
 
 
 function copy (done) {
@@ -35,7 +38,7 @@ function print (done) {
 }
 
 function watchSass () {
-    gulp.watch('./src/scss/App.scss', copy);
+    gulp.watch('./src/scss/**/*', copy);
 }
 function sync (done) {
     browserSync.init({
@@ -49,9 +52,18 @@ function sync (done) {
 
     done();
 }
+gulp.task('apply-prod-environment', function() { process.env.NODE_ENV = 'production'; });
+exports.f = () => (
+    gulp.src('src/bird.jpg')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./src/img'))
+);
+
 gulp.task('scripts', function() {
     return gulp.src(['./src/js/App.js', './src/js/App2.js'])
-        .pipe(react())
+        .pipe(babel({
+            presets: ['es2015', 'react']
+        }))
         .pipe(concat('All.js'))
         .pipe(uglyfly())
         .pipe(gulp.dest('./src/dist/'));

@@ -1,4 +1,4 @@
-$color: yellowgreen;
+$color: grey;
 .App {
   background-color: $color;
     height: 60vh;
@@ -9,9 +9,12 @@ $color: yellowgreen;
   text-align: center;
 
 }
-
+.block:not(.first) {
+color: aqua;
+  background-color: darkorange;
+}
 .App2 {
-  background-color: hotpink;
+  background-color: pink;
   border: solid 2px black;
   height: 140vh;
   padding: 1%;
