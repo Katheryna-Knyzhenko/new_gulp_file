@@ -1,7 +1,8 @@
 $color: grey;
+
 .App {
   background-color: $color;
-    height: 60vh;
+    height: 160vh;
     padding: 1%;
     color: white;
     font-size: 2em;
@@ -9,12 +10,19 @@ $color: grey;
   text-align: center;
 
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 .block:not(.first) {
-color: aqua;
+color: gray;
   background-color: darkorange;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .App2 {
-  background-color: pink;
+  background-color: powderblue;
   border: solid 2px black;
   height: 140vh;
   padding: 1%;
