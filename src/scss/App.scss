@@ -13,14 +13,18 @@ $color: grey;
   padding: 0;
   margin: 0;
 }
-@mixin fontSize ($color, $fontW) {
-  font-size: 1.1em;
-  font-weight: $fontW;
-  font-family: "Arial Narrow", sans-serif;
-  color: $color;
+//@mixin fontSize ($color, $fontW) {
+//  font-size: 1.1em;
+//  font-weight: $fontW;
+//  font-family: "Arial Narrow", sans-serif;
+//  color: $color;
+//}
+@mixin pad ($pad...) {
+  padding: $pad;
 }
 .block:not(.first) {
-color: gray;
+  @include pad(20px 40px);
+color: white;
   background-color: darkorange;
   height: 200px;
   margin-bottom: 20px;
@@ -34,12 +38,13 @@ color: gray;
     display: inline-block;
   }
   a {
-    @include fontSize (blue, bold)
-   text-decoration: underline;
+    //@include fontSize (blue, bold) {
+    //  text-decoration: underline;
+    }
   }
-}
+
 .App2 {
-  background-color: powderblue;
+  background-color: blanchedalmond;
   border: solid 2px black;
   height: 140vh;
   padding: 1%;

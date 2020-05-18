@@ -53,11 +53,11 @@ function sync (done) {
     done();
 }
 gulp.task('apply-prod-environment', function() { process.env.NODE_ENV = 'production'; });
-exports.f = () => (
-    gulp.src('src/bird.jpg')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./src/img'))
-);
+// exports.f = () => (
+//     gulp.src('src/bird.jpg')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('./src/img'))
+// );
 
 gulp.task('scripts', function() {
     return gulp.src(['./src/js/App.js', './src/js/App2.js'])
