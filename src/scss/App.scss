@@ -13,15 +13,37 @@ $color: grey;
   padding: 0;
   margin: 0;
 }
+@mixin links($link, $visited, $hover, $active) {
+  & {
+   color: $link;
+
+   &:hover {
+     color: $hover;
+   }
+
+   &:active {
+     color: $active;
+   }
+
+   &:visited {
+     color: $visited;
+   }
+ }
+}
+.link {
+  @include links (yellow, red, blue, green);
+}
 @mixin fontSize ($color, $fontW) {
   font-size: 1.1em;
   font-weight: $fontW;
   font-family: "Arial Narrow", sans-serif;
   color: $color;
 }
+
 @mixin pad ($pad...) {
   padding: $pad;
 }
+
 .block:not(.first) {
   @include pad(20px 40px);
 color: white;
@@ -40,7 +62,9 @@ color: white;
     a {
       @include fontSize (blue, bold);
         text-decoration: underline;
-
+&:hover {
+  color: grey;
+}
     }
   }
   }
