@@ -7,6 +7,7 @@ function App2() {
 <h1>Привіт</h1>
         <article>Я Катерина Нікітченко</article>
         <img src={require('../bird.jpg')}></img>
+        <a href = 'https://create-react-app.dev/docs/adding-typescript/' className='link' >Ссылка</a>
     </div>
   );
 }

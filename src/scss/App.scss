@@ -3,21 +3,15 @@ $color: grey;
   padding: 0;
   margin: 0;
 }
-@mixin links($link, $visited, $hover, $active) {
+@mixin links($link, $visit, $hover, $active) {
   a {
     color: $link;
 
-    &:hover {
-      color: $hover;
-    }
+    &:hover {color: $hover;}
 
-    &:active {
-      color: $active;
-    }
+    &:active, &:focus {color: $active;}
 
-    &:visited {
-      color: $visited;
-    }
+    &:visited {color: $visit;}
   }
 }
 
@@ -39,12 +33,12 @@ $color: grey;
     color: white;
     font-size: 2em;
     margin: 0 auto;
-  a {
-    @include links(yellow, black, blue, green)
-  }
+
 }
 
-
+.link {
+  @include links(yellow, black, blue, green);
+}
 
 .block:not(.first) {
   @include pad(20px 40px);
