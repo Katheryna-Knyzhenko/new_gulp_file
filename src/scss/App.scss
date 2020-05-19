@@ -14,7 +14,13 @@
     margin: 0 auto;
 
 }
-
+#grid {
+  float: left;
+  width: 100%;
+  > div {
+@include grid(4, 2%);
+  }
+}
 a {
   @include links(yellow, black, blue, green);
 }
@@ -36,6 +42,7 @@ color: white;
   ul {
     list-style: none;
     display: inline-block;
+    width: 100%;
 
     a {
       @include fontSize (blue, bold);
@@ -44,6 +51,11 @@ color: white;
   color: grey;
 }
     }
+  }
+  li {
+    width: (100% / 4);
+    float: left;
+
   }
   }
 

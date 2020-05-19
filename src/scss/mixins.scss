@@ -1,3 +1,17 @@
+@mixin grid ($cols, $margin) {
+float:left;
+  background-color: burlywood;
+  margin-right: $margin;
+  margin-bottom: $margin;
+  height: 150px;
+ width: ((100% - (($cols - 1)  * $margin)) / $cols);
+
+ &:nth-child(#{$cols}n) {
+margin-right: 0;
+}
+}
+
+
 @mixin links ($link, $visit, $hover, $active) {
   a {
     color: $link;

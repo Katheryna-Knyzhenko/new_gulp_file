@@ -3,6 +3,7 @@ import '../css/App.min.css';
 
 function App() {
   return (
+
     <div className="App">
 <h1>Привет</h1>
       <p><a href = 'https://create-react-app.dev/docs/adding-typescript/' className='link' >Ссылка</a></p>
@@ -19,6 +20,7 @@ function App() {
         <article className="block">Я Катерина Книженко</article>
         <a href = 'https://create-react-app.dev/docs/adding-typescript/' className='link'>Ссылка</a>
     </div>
+
   );
 }
 
