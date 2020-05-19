@@ -1,29 +1,8 @@
-$color: grey;
+@import "mixins";
+@import "variables";
 * {
   padding: 0;
   margin: 0;
-}
-@mixin links($link, $visit, $hover, $active) {
-  a {
-    color: $link;
-
-    &:hover {color: $hover;}
-
-    &:active, &:focus {color: $active;}
-
-    &:visited {color: $visit;}
-  }
-}
-
-@mixin fontSize ($color, $fontW) {
-  font-size: 1.1em;
-  font-weight: $fontW;
-  font-family: "Arial Narrow", sans-serif;
-  color: $color;
-}
-
-@mixin pad ($pad...) {
-  padding: $pad;
 }
 
 .App {
@@ -36,8 +15,11 @@ $color: grey;
 
 }
 
-.link {
+a {
   @include links(yellow, black, blue, green);
+}
+.link {
+  padding: 12px;
 }
 
 .block:not(.first) {
