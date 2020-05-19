@@ -1,6 +1,10 @@
 $color: grey;
+* {
+  padding: 0;
+  margin: 0;
+}
 @mixin links($link, $visited, $hover, $active) {
-
+  a {
     color: $link;
 
     &:hover {
@@ -15,23 +19,6 @@ $color: grey;
       color: $visited;
     }
   }
-
-
-.App {
-  background-color: $color;
-    height: 160vh;
-    padding: 1%;
-    color: white;
-    font-size: 2em;
-    margin: 0 auto;
-  a {
-
-    @include links(yellow, black, blue, green);
-  }
-}
-* {
-  padding: 0;
-  margin: 0;
 }
 
 @mixin fontSize ($color, $fontW) {
@@ -44,6 +31,20 @@ $color: grey;
 @mixin pad ($pad...) {
   padding: $pad;
 }
+
+.App {
+  background-color: $color;
+    height: 160vh;
+    padding: 1%;
+    color: white;
+    font-size: 2em;
+    margin: 0 auto;
+  a {
+    @include links(yellow, black, blue, green)
+  }
+}
+
+
 
 .block:not(.first) {
   @include pad(20px 40px);
