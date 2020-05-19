@@ -21,8 +21,8 @@
 @include grid(4, 2%);
   }
 }
-a {
-  @include links(yellow, black, blue, green);
+a  {
+  @include links(yellow, red, blue, green);
 }
 .link {
   padding: 12px;
