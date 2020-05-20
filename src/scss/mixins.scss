@@ -2,7 +2,7 @@
 float:left;
   background-color: gray;
   margin-bottom: $margin;
-  height: 150px;
+  height: 30vh;
   @if($cols >=5) {
     width:100%;
     margin-right: 0;
