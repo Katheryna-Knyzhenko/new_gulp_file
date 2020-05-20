@@ -22,7 +22,7 @@ function App() {
 
             Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass-файл и сохраняет его как простой CSS-файл, который Вы сможете использовать на любом сайте.
         </article>
-        <footer><a href = 'ж' className='link2'>Ссылка</a></footer>
+        <footer><a href = 'https://sass-scss.ru/guide/' className='link2'>Ссылка</a></footer>
     </div>
 
   );

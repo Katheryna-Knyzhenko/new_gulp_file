@@ -23,7 +23,9 @@
 }
 .link {
   @include links(orange, red, blue, green);
-  padding: 20px;
+  padding: 1%;
+  font-size: 0.8em;
+  font-style: italic;
 }
 .h1 {
   text-align: center;
@@ -34,7 +36,9 @@
 .link2{
   @extend .h1;
   @include links(white, red, blue, green) {
-    padding: 13px;
+    padding: 2%;
+    font-size: 0.8em;
+    font-style: italic;
     //&:visited {
     //  color: cornsilk;
     //}
@@ -61,6 +65,7 @@ color: white;
       @include fontSize (white, bold);
         text-decoration: underline;
       padding: 13px;
+      font-style: italic;
 &:hover {
   color: grey;
 }
