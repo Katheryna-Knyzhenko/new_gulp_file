@@ -2,6 +2,7 @@
 float:left;
   background-color: gray;
   margin-bottom: $margin;
+  //box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
   height: 30vh;
   @if($cols >=5) {
     width:100%;
