@@ -21,13 +21,22 @@
 @include grid(4, 2%);
   }
 }
-a  {
-  @include links(yellow, red, blue, green);
-}
 .link {
-  padding: 12px;
+  @include links(yellow, red, blue, green);
+  padding: 20px;
 }
+.h1 {
+  background-color: aqua;
+}
+.link2{
+  @extend .h1;
+  @include links(yellow, red, blue, green) {
 
+
+
+  }
+
+}
 .block:not(.first) {
   @include pad(20px 40px);
 color: white;

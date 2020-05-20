@@ -5,7 +5,7 @@ function App() {
   return (
 
     <div className="App">
-<h1>Привет</h1>
+<h1 className='h1'>Привет</h1>
       <p><a href = 'https://create-react-app.dev/docs/adding-typescript/' className='link' >Ссылка</a></p>
         <article className="block first">Я Катерина Книженко</article>
         <article className="block" id= 'central-block'>
@@ -18,7 +18,7 @@ function App() {
             <a href = 'https://create-react-app.dev/docs/adding-typescript/' > Ссылка</a></li>
         </ul></article>
         <article className="block">Я Катерина Книженко</article>
-        <a href = 'https://create-react-app.dev/docs/adding-typescript/' className='link'>Ссылка</a>
+        <footer><a href = 'ж' className='link2'>Ссылка</a></footer>
     </div>
 
   );

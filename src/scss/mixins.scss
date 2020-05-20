@@ -1,16 +1,27 @@
 @mixin grid ($cols, $margin) {
 float:left;
   background-color: darkorange;
-  margin-right: $margin;
   margin-bottom: $margin;
   height: 150px;
- width: ((100% - (($cols - 1)  * $margin)) / $cols);
+  @if($cols >=5) {
+    width:100%;
+    margin-right: 0;
+  } @else {
+    width: ((100% - (($cols - 1)  * $margin)) / $cols);
+    margin-right: $margin;
+  }
+
 
  &:nth-child(#{$cols}n) {
 margin-right: 0;
 }
 }
-
+//@for $i from 24 to 29 {
+//.#{$someVar}-#{$i} {
+//  width: 50px + $i;
+//  height: 50px + $i;;
+//}
+//}
 
 @mixin links ($link, $visit, $hover, $active) {
   & {
@@ -27,7 +38,7 @@ margin-right: 0;
       color: $active;
     }
 
-
+@content;
   }
 }
 
