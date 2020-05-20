@@ -1,6 +1,6 @@
 @mixin grid ($cols, $margin) {
 float:left;
-  background-color: darkorange;
+  background-color: gray;
   margin-bottom: $margin;
   height: 150px;
   @if($cols >=5) {

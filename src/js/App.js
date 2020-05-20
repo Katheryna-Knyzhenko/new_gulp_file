@@ -15,7 +15,7 @@ function App() {
             <li>3</li>
             <li>4
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href = 'https://create-react-app.dev/docs/adding-typescript/' > Ссылка</a></li>
+            <a href = 'https://www.youtube.com/watch?v=bOGro2sUdQc&list=PLR-xaKCoL-392sWXp93ODkYdiJKTtmEFG&index=2' > Ссылка</a></li>
         </ul></article>
         <article className="block">Препроцессинг
             Написание CSS само по себе весело, но когда таблица стилей становится огромной, то становится и сложно её обслуживать. И вот в таком случае нам поможет препроцессор. Sass позволяет использовать функции недоступные в самом CSS, например, переменные, вложенности, миксины, наследование и другие приятные вещи, возвращающие удобство написания CSS.

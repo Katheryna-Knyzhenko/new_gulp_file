@@ -7,7 +7,7 @@
 
 .App {
   background-color: $color;
-    height: 160vh;
+    height: 115vh;
     padding: 1%;
     color: white;
     font-size: 2em;
@@ -49,12 +49,13 @@
   @include pad(20px 40px);
 color: white;
   background-color: darkorange;
-  height: 200px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  height: 35vh;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 #central-block {
-  padding: 30px;
+  padding: 2%;
+  height: 10vh;
 
   ul {
     list-style: none;
@@ -64,7 +65,7 @@ color: white;
     a {
       @include fontSize (white, bold);
         text-decoration: underline;
-      padding: 13px;
+      padding: 1%;
       font-style: italic;
 &:hover {
   color: grey;
@@ -80,11 +81,10 @@ color: white;
 
 
   .App2 {
-    background-color: gainsboro;
-    border: solid 2px black;
-    height: 140vh;
+    background-color: darkorange;
+    height: 190vh;
     padding: 1%;
-    color: black;
+    color: white;
     font-size: 2em;
     margin: 0 auto;
     text-align: center;
