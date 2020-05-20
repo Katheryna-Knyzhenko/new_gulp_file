@@ -26,9 +26,7 @@ margin-right: 0;
 @mixin links ($link, $visit, $hover, $active) {
   & {
     color: $link;
-    &:visited {
-      color: $visit;
-    }
+
 
     &:hover {
       color: $hover;

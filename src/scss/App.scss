@@ -31,9 +31,10 @@
 .link2{
   @extend .h1;
   @include links(yellow, red, blue, green) {
-
-
-
+    padding: 13px;
+    &:visited {
+      color: cornsilk;
+    }
   }
 
 }
