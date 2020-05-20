@@ -22,19 +22,22 @@
   }
 }
 .link {
-  @include links(yellow, red, blue, green);
+  @include links(orange, red, blue, green);
   padding: 20px;
 }
 .h1 {
-  background-color: aqua;
+  text-align: center;
+  background-color: darkorange;
+  padding: 1%;
+
 }
 .link2{
   @extend .h1;
-  @include links(yellow, red, blue, green) {
+  @include links(white, red, blue, green) {
     padding: 13px;
-    &:visited {
-      color: cornsilk;
-    }
+    //&:visited {
+    //  color: cornsilk;
+    //}
   }
 
 }
@@ -55,8 +58,9 @@ color: white;
     width: 100%;
 
     a {
-      @include fontSize (blue, bold);
+      @include fontSize (white, bold);
         text-decoration: underline;
+      padding: 13px;
 &:hover {
   color: grey;
 }
@@ -87,3 +91,7 @@ color: white;
     margin: 2em;
     border-radius: 14%;
   }
+.block {
+  overflow: auto;
+  font-size: 0.7em;
+}
